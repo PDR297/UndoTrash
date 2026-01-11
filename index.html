@@ -1,5 +1,177 @@
-index.html
-styles.css
-script.js
-/assets/logo-primary.jpg
-/assets/logo-mark.jpg
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Shirtless Lads Undoing Trash Society — local cleanups, public spaces, real-world action." />
+  <title>S.L.U.T.S. — Shirtless Lads Undoing Trash Society</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/favicon.png" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="S.L.U.T.S. Home">
+        <img class="brand-mark" src="assets/logo-mark.jpg" alt="S.L.U.T.S. logo mark" />
+        <span class="brand-text">S.L.U.T.S.</span>
+      </a>
+
+      <nav class="nav">
+        <a href="#who">Who we are</a>
+        <a href="#do">What we do</a>
+        <a href="#involved">Get involved</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        ☰
+      </button>
+    </div>
+
+    <div class="mobile-nav" id="mobileNav" hidden>
+      <a href="#who">Who we are</a>
+      <a href="#do">What we do</a>
+      <a href="#involved">Get involved</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Shirtless Lads Undoing Trash Society</h1>
+          <p class="lead">
+            We show up, clean up, and leave public spaces better than we found them.
+          </p>
+
+          <div class="hero-ctas">
+            <a class="btn" href="#involved">Get involved</a>
+            <a class="btn btn-ghost" href="#who">Learn more</a>
+          </div>
+
+          <p class="micro">
+            Community cleanups • Parks & trails • Simple, real-world action
+          </p>
+        </div>
+
+        <div class="hero-logo">
+          <img src="assets/logo-primary.jpg" alt="S.L.U.T.S. full logo" />
+        </div>
+      </div>
+    </section>
+
+    <section id="who" class="section">
+      <div class="container">
+        <h2>Who we are</h2>
+        <p>
+          S.L.U.T.S. is a volunteer group focused on one thing: taking responsibility for the places we live.
+          No big speeches. No complicated rules. Just showing up with gloves and bags and doing the work.
+        </p>
+
+        <div class="cards">
+          <div class="card">
+            <h3>Low ego</h3>
+            <p>Anyone can help. Come as you are. Do what you can.</p>
+          </div>
+          <div class="card">
+            <h3>High follow-through</h3>
+            <p>We pick a time, pick a place, and we go.</p>
+          </div>
+          <div class="card">
+            <h3>Local impact</h3>
+            <p>Parks, trails, streets — the places we all share.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="do" class="section section-alt">
+      <div class="container">
+        <h2>What we do</h2>
+        <ul class="bullets">
+          <li>Organize small-to-medium community trash cleanups</li>
+          <li>Coordinate supplies (bags, grabbers, gloves) when possible</li>
+          <li>Share meetup info and before/after results</li>
+          <li>Make it easy for new people to join without pressure</li>
+        </ul>
+
+        <div class="note">
+          <strong>Safety note:</strong> We keep it common-sense: daylight hours, public areas, and no heroics.
+        </div>
+      </div>
+    </section>
+
+    <section id="involved" class="section">
+      <div class="container">
+        <h2>Get involved</h2>
+        <p>
+          Want to help, host a cleanup, or partner with us? Send a note below.
+          We don’t publish contact emails — this form is the best way to reach us.
+        </p>
+
+        <div class="form-wrap">
+          <!-- ✅ Formspree: replace YOUR_FORM_ID after you create it -->
+          <form id="contactForm" class="form" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
+            <div class="grid-2">
+              <label>
+                Name
+                <input name="name" autocomplete="name" required />
+              </label>
+
+              <label>
+                Reply-to email
+                <input type="email" name="email" autocomplete="email" required />
+              </label>
+            </div>
+
+            <label>
+              What’s up?
+              <select name="topic" required>
+                <option value="" selected disabled>Choose one…</option>
+                <option>Join a cleanup</option>
+                <option>Host a cleanup</option>
+                <option>Partner / sponsor supplies</option>
+                <option>Press / social</option>
+                <option>Other</option>
+              </select>
+            </label>
+
+            <label>
+              Message
+              <textarea name="message" rows="6" required></textarea>
+            </label>
+
+            <!-- Honeypot (basic spam reduction) -->
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+            <button class="btn" type="submit">Send</button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+
+            <p class="micro">
+              By submitting, you agree we can reply to your message. We don’t sell or share contact info.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <img class="footer-mark" src="assets/logo-mark.jpg" alt="S.L.U.T.S. logo mark" />
+          <div>
+            <div class="footer-title">S.L.U.T.S.</div>
+            <div class="footer-sub">Shirtless Lads Undoing Trash Society</div>
+          </div>
+        </div>
+        <div class="footer-right">
+          <a href="#top">Back to top ↑</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
